@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href ="style.css"/> 
+    <link rel = "stylesheet" type = "text/css" href ="animatedButton.css"/> 
+    <link rel = "stylesheet" type = "text/css" href ="animatedBackround.css"/> 
+    <title>Курс по Ext js</title>
+</head>
+<body>
+    <div id="stars-container">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div class="navigation">
+            <button class="bubbly-button" onclick="showSlide(1)">1. База</button>
+            <button class="bubbly-button" onclick="showSlide(2)">2. Классы</button>
+            <button class="bubbly-button" onclick="showSlide(3)">3. Работа с DOM</button>
+            <button class="bubbly-button" onclick="showSlide(4)">4. Анимация</button>
+            <button class="bubbly-button" onclick="showSlide(5)">5. Компоновка</button>
+            <button class="bubbly-button" onclick="showSlide(6)">6. Компоненты</button>
+        </div>
+        <div class="slides">
+            <div class="slide hachi-maru-pop-regular">
+                <h1>Добро пожаловать на курс по Ext Js</h1>
+                <img src="img/background2.png" style="width: 90%;">
+            </div>
+            <div class="slide">
+                <h1>База</h1>
+                <p>1. Что такое ExtJS?</p>
+                <p>2. Аналитика 2024</p>
+                <p>3. Источник <a href="https://metanit.com/web/extjs/">metanit.com/web/extjs/</a></p>
+                <h3>Подключение к проекту</h3>
+
+                <p>1. Либо скачать отсюда локально папку с фреймворком <a href="https://www.sencha.com/products/extjs/communityedition/">https://www.sencha.com/products/extjs/communityedition/</a></p>
+                <p>Community Edition рапротраняется бесплатно по лиценции GPL v3, 
+                    то есть ваши проекты должны выкладыватсья с ссылкой на исходный код программы и каждый может её скачать и изменять.
+                    Также эта версия предполагает, что вы можете заработать с помощью программ, написанных на ней до 10 000$.
+                    Если больше, нужно менять лицензию на платную</p>
+                <p>2. Либо использовать CDN (для курса <b>рекомендую</b>)
+                    <code><br>
+                        &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-crisp/resources/theme-crisp-all.css"/&gt;  <Br>
+                        &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"&gt;&lt;/script&gt;<br>
+                    </code>
+                </p>
+            </div>
+            <div class="slide">
+                <h1>Классы</h1>
+                <code>
+                    1. Создать приложение - Ext.application() и Ext.OnReady(); <Br>
+                    2. Определение класса - Ext.define(); <Br>
+                    3. Конструкторы; <Br>
+                    4. Конфиг; <Br>
+                    5. Статистические члены; <Br>
+                    6. Наследование; <Br>
+                    7. Переопределие базовых методов; <Br>
+                    8. Миксины - множественное наследование; <Br>
+                    9. Динамическая подгрузка классов; <Br>
+                    10. Singleton; <Br>
+                    11. Псевдонимы классов; <Br>
+                </code>
+                <p>Примеры: </p>
+                <p><a href="./Pages/page1_application.html" target="_blank">1. Создание приложения</a></p>
+                <p><a href="./Pages/page2_Classes.html" target="_blank">2. Классы</a></p>
+                <p><a href="./Pages/page3_dynamicClasses.html" target="_blank">3. DynamicClasses</a></p>
+            </div>
+            <div class="slide">
+                <h1>Работа с DOM</h1>
+                <code>
+                    1. Получаем элемент Ext.get('content'); <Br>
+                    2. Получаем несколько элементов Ext.select('div#text'); <Br>
+                    3. Стилизуем элемент element.setStyle; <Br>
+                    4. Создаём и добавляем элемент в html Ext.DomHelper.append(body, newElement); <Br>   
+                    5. Создание шаблонов; <Br>   
+                </code>
+                <p>Примеры: </p>
+                <p><a href="./Pages/page4_Dom.html" target="_blank">1. Работа с DOM</a></p>
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Анимация</h1>
+                <code>
+                    1. Создаём ввстроенную в Ext анимацию элементов и компонентов; <Br>
+                    2. Создаём свою анимацию; <Br>
+                    3. Стилизуем элемент element.setStyle; <Br>
+                    4. Создаём и добавляем элемент в html Ext.DomHelper.append(body, newElement); <Br>   
+                    5. Создание шаблонов; <Br>   
+                </code>
+                <p>Примеры: </p>
+                <p><a href="./Pages/page5_Animation.html" target="_blank">1. Анимация</a></p>
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Компоновка</h1>
+                <code>
+                    1. В ExtJS 4 компоненты не могу находиться сами по себе, они обязательно должны заключаться в какой-нибудь контейнер. Контейнер - это по сути тоже компонент, который может включать в себя дочерние компоненты и управлять их расположением. Наиболее распространенные контейнеры - Panel, Viewport, Window. <Br>
+                    2. Компоненты внутри растягиваются относительно значения свойства layout. По умолчанию оно 'fit'. То есть, компоненты растягиваются по по всему размеру панели; <Br>
+                    3. layout: vbox - располагает элементы по вертикали. <Br>  
+                    4. layout: hbox - располагает элементы по горизонтали. <Br>  
+                    5. Можно управлять находдением каждого элемента относительно границ - это регулирует параметр 'pack' со значениями start, center, end. Относительно заданого параметра все элементы прижмутся к заданной границе.<Br> 
+                    6. Таблицы.
+                    7. Аккордеоны.
+                    8. Слайды.
+                    9. Анкорная (процентное соотношение размеров относительно родителя).
+                    10. Граничная (аля ваша IDE)
+                </code>
+                <p>Примеры: </p>
+                <p><a href="./Pages/page6_Conteiners.html" target="_blank">1. Панель</a></p>
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Компоненты</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>AJAX запросы</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Формы</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Работа с данными</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Рисование и диаграмы</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Архитектура приложения и MVC</h1>
+                
+            </div>
+            <div class="slide">
+                <div id="app-container"></div>
+                <h1>Доплнительно</h1>
+                <code>
+                    1. Ext.Data - работа с датами; <Br>
+                    2. Ext.XTemplate - встраивание html кода (условия и циклы как во Vue, а также встравивание Js); <Br>
+                </code>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 10px; font-family: monospace; color: white;"> Курс Ext Js. Автор: Греков Владислав ©</p>
+    <script type = "text/javascript" src = "slide.js" ></script> 
+    <script type = "text/javascript" src = "animatedButton.js" ></script> 
+</body>
+</html>

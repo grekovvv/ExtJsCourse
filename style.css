@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Ruslan+Display&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #191F24 100%);;
+  }
+  
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .navigation button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .navigation button:hover {
+    background-color: #003d80;
+  }
+  
+  .slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slide {
+    display: none; /* Изначально скрываем все слайды */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    text-align: left;
+  }
+  
+  .slide.active {
+    display: block; /* Показываем только активный слайд */
+  }
+
+  .hachi-maru-pop-regular {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
