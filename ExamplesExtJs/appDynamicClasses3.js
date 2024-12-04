@@ -17,4 +17,4 @@ Ext.onReady(function(){
 // });
 
 //Можно отдельно загружать пространства имён и потом их использовать
-Ext.Loader.setPath('MyModels','Classes/MyModels');
+//Ext.Loader.setPath('MyModels','Classes/MyModels');

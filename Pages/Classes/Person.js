@@ -13,6 +13,6 @@ Ext.define('Classes.Person', {
         }
     },
     getinfo: function(){
-        alert("Полное имя : " + this.name + " " + this.surname);
+        console.log("Полное имя : " + this.config.name + " " + this.config.surname);
     },
   });

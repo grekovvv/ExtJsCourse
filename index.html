@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type = "text/css" href ="style.css"/> 
-    <link rel = "stylesheet" type = "text/css" href ="animatedButton.css"/> 
-    <link rel = "stylesheet" type = "text/css" href ="animatedBackround.css"/> 
+    <link rel = "stylesheet" type = "text/css" href ="/style/style.css"/> 
+    <link rel = "stylesheet" type = "text/css" href ="/style/animatedButton.css"/> 
+    <link rel = "stylesheet" type = "text/css" href ="/style/animatedBackround.css"/> 
     <title>Курс по Ext js</title>
 </head>
 <body>
@@ -20,136 +20,176 @@
             <button class="bubbly-button" onclick="showSlide(4)">4. Анимация</button>
             <button class="bubbly-button" onclick="showSlide(5)">5. Компоновка</button>
             <button class="bubbly-button" onclick="showSlide(6)">6. Компоненты</button>
+            <button class="bubbly-button" onclick="showSlide(7)">7. AJAX запросы</button>
+            <button class="bubbly-button" onclick="showSlide(8)">8. Формы</button>
+            <button class="bubbly-button" onclick="showSlide(9)">9. Работа с данными</button>
+            <button class="bubbly-button" onclick="showSlide(10)">10. Рисование и диаграмы</button>
+            <button class="bubbly-button" onclick="showSlide(11)">11. Архитектура приложения и MVC</button>
+            <button class="bubbly-button" onclick="showSlide(12)">12. Дополнительно</button>
         </div>
         <div class="slides">
-            <div class="slide hachi-maru-pop-regular">
+            <div class="slide hachi-maru-pop-regular" style="text-align: center; max-height: 430px; overflow-y: hidden;">
                 <h1>Добро пожаловать на курс по Ext Js</h1>
-                <img src="img/background2.png" style="width: 90%;">
+                <img src="img/background2.png" style="width: 100%;">
             </div>
             <div class="slide">
-                <h1>База</h1>
-                <p>1. Что такое ExtJS?</p>
-                <p>2. Аналитика 2024</p>
-                <p>3. Источник <a href="https://metanit.com/web/extjs/">metanit.com/web/extjs/</a></p>
+                <h2>База</h2>
+                <ol>
+                    <li>Что такое <a href="https://www.sencha.com/products/extjs/">ExtJS</a>?</li>
+                    <li>Аналитика 2024 (кратко. оно тебе не надо. юзай <a href="https://hackr.io/blog/best-javascript-frameworks">альтернативы</a>).</li>
+                    <li>Источник <a href="https://metanit.com/web/extjs/">metanit.com/web/extjs/</a></li>
+                </ol>
+                
+                <h3>Как пользоваться курсом</h3>
+                <p>
+                    <ul>
+                        <li>Курс создан как вспомогательный инструмент преподавателю. На слайдах тезисно изложена структура.</li>
+                        <li>Весь материал расположен внутри js файлов, которые загружаются при просмотре примеров в слайдах. </li>
+                        <li>Желательно деражать под рукой проект и эксперементировать с кодом.</li>
+                        <li>Если у вас нет такой возможности, добро пожаловать в Source в инструментах разработчика браузера (F12).</li>
+                    </ul>
+                </p>
                 <h3>Подключение к проекту</h3>
-
-                <p>1. Либо скачать отсюда локально папку с фреймворком <a href="https://www.sencha.com/products/extjs/communityedition/">https://www.sencha.com/products/extjs/communityedition/</a></p>
-                <p>Community Edition рапротраняется бесплатно по лиценции GPL v3, 
-                    то есть ваши проекты должны выкладыватсья с ссылкой на исходный код программы и каждый может её скачать и изменять.
-                    Также эта версия предполагает, что вы можете заработать с помощью программ, написанных на ней до 10 000$.
-                    Если больше, нужно менять лицензию на платную</p>
-                <p>2. Либо использовать CDN (для курса <b>рекомендую</b>)
+                <ol>
+                    <li>Либо (использовать локально) скачать отсюда два файлика <a href="https://www.sencha.com/products/extjs/communityedition/">https://www.sencha.com/products/extjs/communityedition/</a></li>
+                    <ol type="a">
+                        <li>Либо (использовать локально) скачать отсюда, вложить в проект и ссылаться на них 
+                            <a href="https://www.cdnpkg.com/extjs/file/ext-all.js/?id=35036">1) ext-all.js</a>
+                            <a href="https://www.cdnpkg.com/extjs/file/ext-all.css/?id=35036">2) ext-all.css</a>
+                        </li>
+                    </ol>
+                    <p><i>Community Edition рапротраняется бесплатно по лиценции GPL v3, 
+                        то есть ваши проекты должны выкладыватсья с ссылкой на исходный код программы и каждый может её скачать и изменять.
+                        Также эта версия предполагает, что вы можете заработать с помощью программ, написанных на ней до 10 000$.
+                        Если больше, нужно менять лицензию на платную.
+                    </i></p>
+                    <li>Либо использовать CDN (для курса <b>рекомендую</b>)</li>
                     <code><br>
                         &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-crisp/resources/theme-crisp-all.css"/&gt;  <Br>
                         &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"&gt;&lt;/script&gt;<br>
                     </code>
-                </p>
+                </ol>
             </div>
             <div class="slide">
                 <h1>Классы</h1>
-                <code>
-                    1. Создать приложение - Ext.application() и Ext.OnReady(); <Br>
-                    2. Определение класса - Ext.define(); <Br>
-                    3. Конструкторы; <Br>
-                    4. Конфиг; <Br>
-                    5. Статистические члены; <Br>
-                    6. Наследование; <Br>
-                    7. Переопределие базовых методов; <Br>
-                    8. Миксины - множественное наследование; <Br>
-                    9. Динамическая подгрузка классов; <Br>
-                    10. Singleton; <Br>
-                    11. Псевдонимы классов; <Br>
-                </code>
-                <p>Примеры: </p>
-                <p><a href="./Pages/page1_application.html" target="_blank">1. Создание приложения</a></p>
-                <p><a href="./Pages/page2_Classes.html" target="_blank">2. Классы</a></p>
-                <p><a href="./Pages/page3_dynamicClasses.html" target="_blank">3. DynamicClasses</a></p>
+                <ol>
+                    <li>Создать приложение - Ext.application() и Ext.OnReady();</li>
+                    <li>Определение класса - Ext.define();</li>
+                    <li>Конструкторы;</li>
+                    <li>Конфиг;</li>
+                    <li>Статические члены;</li>
+                    <li>Наследование;</li>
+                    <li>Переопределение базовых методов;</li>
+                    <li>Миксы - множественное наследование;</li>
+                    <li>Динамическая подгрузка классов;</li>
+                    <li>Singleton;</li>
+                    <li>Псевдонимы классов;</li>
+                  </ol>
+                <h3>Примеры: </h3>
+                <ol>
+                    <li><a href="./Pages/page1_application.html" target="_blank">Создание приложения</a></li>
+                    <li><a href="./Pages/page2_Classes.html" target="_blank">Классы</a></li>
+                    <li><a href="./Pages/page3_dynamicClasses.html" target="_blank">DynamicClasses</a></li>
+                </ol>
             </div>
             <div class="slide">
                 <h1>Работа с DOM</h1>
-                <code>
-                    1. Получаем элемент Ext.get('content'); <Br>
-                    2. Получаем несколько элементов Ext.select('div#text'); <Br>
-                    3. Стилизуем элемент element.setStyle; <Br>
-                    4. Создаём и добавляем элемент в html Ext.DomHelper.append(body, newElement); <Br>   
-                    5. Создание шаблонов; <Br>   
-                </code>
-                <p>Примеры: </p>
+                <ol>
+                    <li>Получаем элемент - Ext.get('content');</li>
+                    <li>Получаем несколько элементов - Ext.select('div#text');</li>
+                    <li>Стилизуем элемент - element.setStyle;</li>
+                    <li>Создаем и добавляем элемент в HTML - Ext.DomHelper.append(body, newElement);</li>
+                    <li>Создание шаблонов;</li>
+                  </ol>
+                <h3>Примеры: </h3>
                 <p><a href="./Pages/page4_Dom.html" target="_blank">1. Работа с DOM</a></p>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Анимация</h1>
-                <code>
-                    1. Создаём ввстроенную в Ext анимацию элементов и компонентов; <Br>
-                    2. Создаём свою анимацию; <Br>
-                    3. Стилизуем элемент element.setStyle; <Br>
-                    4. Создаём и добавляем элемент в html Ext.DomHelper.append(body, newElement); <Br>   
-                    5. Создание шаблонов; <Br>   
-                </code>
-                <p>Примеры: </p>
+                <ol>
+                    <li>Создаём встроенную в Ext анимацию элементов и компонентов;</li>
+                    <li>Создаём свою анимацию;</li>
+                    <li>Стилизуем элемент - element.setStyle;</li>
+                    <li>Создаём и добавляем элемент в HTML - Ext.DomHelper.append(body, newElement);</li>
+                    <li>Создание шаблонов;</li>
+                  </ol>
+                <h3>Примеры: </h3>
                 <p><a href="./Pages/page5_Animation.html" target="_blank">1. Анимация</a></p>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Компоновка</h1>
-                <code>
-                    1. В ExtJS 4 компоненты не могу находиться сами по себе, они обязательно должны заключаться в какой-нибудь контейнер. Контейнер - это по сути тоже компонент, который может включать в себя дочерние компоненты и управлять их расположением. Наиболее распространенные контейнеры - Panel, Viewport, Window. <Br>
-                    2. Компоненты внутри растягиваются относительно значения свойства layout. По умолчанию оно 'fit'. То есть, компоненты растягиваются по по всему размеру панели; <Br>
-                    3. layout: vbox - располагает элементы по вертикали. <Br>  
-                    4. layout: hbox - располагает элементы по горизонтали. <Br>  
-                    5. Можно управлять находдением каждого элемента относительно границ - это регулирует параметр 'pack' со значениями start, center, end. Относительно заданого параметра все элементы прижмутся к заданной границе.<Br> 
-                    6. Таблицы.
-                    7. Аккордеоны.
-                    8. Слайды.
-                    9. Анкорная (процентное соотношение размеров относительно родителя).
-                    10. Граничная (аля ваша IDE)
-                </code>
-                <p>Примеры: </p>
+                <ol>
+                    <li>В Ext JS 4 компоненты не могут существовать сами по себе, они обязательно должны быть заключены в какой-то контейнер. Контейнер – это, по сути, тоже компонент, который может содержать дочерние компоненты и управлять их расположением. Наиболее распространённые контейнеры – Panel, Viewport, Window.</li>
+                    <li>Компоненты внутри контейнера растягиваются относительно значения свойства layout. По умолчанию оно равно 'fit', то есть компоненты растягиваются на весь размер панели.</li>
+                    <li>layout: vbox – располагает элементы по вертикали.</li>
+                    <li>layout: hbox – располагает элементы по горизонтали.</li>
+                    <li>Можно управлять положением каждого элемента относительно границ с помощью параметра 'pack' со значениями start, center, end. Все элементы при этом прижимаются к указанной границе.</li>
+                    <li>Таблицы.</li>
+                    <li>Аккордеоны.</li>
+                    <li>Слайды.</li>
+                    <li>Анкорная (процентное соотношение размеров относительно родительского элемента).</li>
+                    <li>Граничная (аналогично вашей IDE).</li>
+                </ol>
+                <h3>Примеры: </h3>
                 <p><a href="./Pages/page6_Conteiners.html" target="_blank">1. Панель</a></p>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Компоненты</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>AJAX запросы</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Формы</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Работа с данными</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Рисование и диаграмы</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Архитектура приложения и MVC</h1>
                 
+                <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
-                <h1>Доплнительно</h1>
-                <code>
-                    1. Ext.Data - работа с датами; <Br>
-                    2. Ext.XTemplate - встраивание html кода (условия и циклы как во Vue, а также встравивание Js); <Br>
-                </code>
+                <h1>Дополнительно</h1>
+                <ol>
+                    <li>Ext.Date - работа с датами;</li>
+                    <li>Ext.XTemplate - встраивание HTML-кода (условия и циклы как во Vue, а также вставка JavaScript);</li>
+                </ol>
+                <h3>Примеры: </h3>
             </div>
         </div>
+        <p style="margin-top: -120px;"> 
+            <a class="github-button" 
+            href="https://github.com/grekovvv/ExtJsCourse" 
+            data-color-scheme="no-preference: dark_dimmed; light: dark; dark: dark;"
+            aria-label="Star grekovvv/ExtJsCourse on GitHub">grekovvv/ExtJsCourse</a>
+        </p>
     </div>
-    <p style="font-size: 10px; font-family: monospace; color: white;"> Курс Ext Js. Автор: Греков Владислав ©</p>
-    <script type = "text/javascript" src = "slide.js" ></script> 
-    <script type = "text/javascript" src = "animatedButton.js" ></script> 
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type = "text/javascript" src = "/js/slide.js" ></script> 
+    <script type = "text/javascript" src = "/js/animatedButton.js" ></script> 
 </body>
 </html>

@@ -61,7 +61,7 @@ Ext.define('Classes.Person3', {
         this.initConfig(config);
     },
     getinfo: function(){
-        alert("Полное имя : " + this.name + " " + this.surname);
+        console.log("Полное имя : " + this.name + " " + this.surname);
     },
 });
 
@@ -88,14 +88,14 @@ Ext.define('Classes.Person', {
     },
     getinfo: function() 
     {
-        alert("Полное имя : " + this.name + " " + this.surname);
+        console.log("Полное имя : " + this.name + " " + this.surname);
     },
   });
  
 var eugene = Ext.create('Classes.Person');
 eugene.getinfo();
 var james = Classes.Person.factory('James', 'Gosling');
-alert(Classes.Person.instanceCount);
+console.log(Classes.Person.instanceCount);
 james.getinfo();
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -134,7 +134,7 @@ Ext.define('Classes.Manager', {
     // переопределяем метод базового класса
     getinfo: function() {
         this.callParent();
-        alert("Департамент : " + this.department);
+        console.log("Департамент : " + this.department);
     }
   });
 //////////////////////////////////////////////////////////////////////////////////////
@@ -197,10 +197,10 @@ Ext.define('Classes.Person', {
     singleton: true,
     name: 'Eugene',
     surname : 'Popov',
-getinfo: function()
-{
-    console.log("Полное имя : " + this.name + " " + this.surname);
-}
+    getinfo: function()
+    {
+        console.log("Полное имя : " + this.name + " " + this.surname);
+    }
 });
 
 Classes.Person.getinfo();
@@ -216,16 +216,16 @@ Ext.define('Classes.Person', {
     alias: 'person',
     name: 'Eugene',
     surname : 'Popov',
-constructor: function(name, surname) {
-    if (name && surname) {
-        this.name = name;
-        this.surname = surname;
+    constructor: function(name, surname) {
+        if (name && surname) {
+            this.name = name;
+            this.surname = surname;
+        }
+    },
+    getinfo: function()
+    {
+        console.log("Полное имя : " + this.name + " " + this.surname);
     }
-},
-getinfo: function()
-{
-    console.log("Полное имя : " + this.name + " " + this.surname);
-}
 });
 
 var eugene = Ext.create('person');

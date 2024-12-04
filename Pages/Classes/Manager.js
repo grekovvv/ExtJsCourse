@@ -12,6 +12,6 @@ Ext.define('Classes.Manager', {
     },
     getinfo: function(){
         this.callParent();
-        alert("Департамент : " + this.department);
+        console.log("Департамент : " + this.config.department);
     }
   });
