@@ -1,0 +1,17 @@
+<languages>
+    <language>
+        <title>C</title>
+        <position>1</position>
+        <rate>19</rate>
+    </language>
+    <language>
+        <title>JAVA</title>
+        <position>2</position>
+        <rate>16</rate>
+    </language>
+    <language>
+        <title>Objective-C</title>
+        <position>3</position>
+        <rate>10</rate>
+    </language>
+</languages>

@@ -46,7 +46,7 @@
                         <li>Курс создан как вспомогательный инструмент преподавателю. На слайдах тезисно изложена структура.</li>
                         <li>Весь материал расположен внутри js файлов, которые загружаются при просмотре примеров в слайдах. </li>
                         <li>Желательно деражать под рукой проект и эксперементировать с кодом.</li>
-                        <li>Если у вас нет такой возможности, добро пожаловать в Source в инструментах разработчика браузера (F12).</li>
+                        <li>Если у вас нет такой возможности, добро пожаловать в инструменты разработчика браузера (F12 -> Source).</li>
                     </ul>
                 </p>
                 <h3>Подключение к проекту</h3>
@@ -102,7 +102,9 @@
                     <li>Создание шаблонов;</li>
                   </ol>
                 <h3>Примеры: </h3>
-                <p><a href="./Pages/page4_Dom.html" target="_blank">1. Работа с DOM</a></p>
+                <ol>
+                    <li><a href="./Pages/page4_Dom.html" target="_blank">Работа с DOM</a></li>
+                </ol>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
@@ -110,12 +112,11 @@
                 <ol>
                     <li>Создаём встроенную в Ext анимацию элементов и компонентов;</li>
                     <li>Создаём свою анимацию;</li>
-                    <li>Стилизуем элемент - element.setStyle;</li>
-                    <li>Создаём и добавляем элемент в HTML - Ext.DomHelper.append(body, newElement);</li>
-                    <li>Создание шаблонов;</li>
                   </ol>
                 <h3>Примеры: </h3>
-                <p><a href="./Pages/page5_Animation.html" target="_blank">1. Анимация</a></p>
+                <ol>
+                    <li><a href="./Pages/page5_Animation.html" target="_blank">Анимация</a></li>
+                </ol>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
@@ -133,41 +134,90 @@
                     <li>Граничная (аналогично вашей IDE).</li>
                 </ol>
                 <h3>Примеры: </h3>
-                <p><a href="./Pages/page6_Conteiners.html" target="_blank">1. Панель</a></p>
+                <ol>
+                    <li><a href="./Pages/page6_Conteiners.html" target="_blank">Панель</a></li>
+                </ol>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Компоненты</h1>
                 
+                <ol>
+                    <li>Компоненты сами по себе не могут существовать. Все они помещаются в некоторый контейнер. Контейнер представляет специальный компонент, который может включать другие компоненты.  Стандартная, но не обязательная, иерархия компонентов может начинаться с класса Viewport, который затем включает остальные контейнеры и компоненты.</li>
+                    <li>Каждый контейнер имеет свойство items, в котором можно установить дочерние элементы. </li>
+                    <li>Рендеринг компонентов. renderTo. Направленный и отложенный (direct, lazy).</li>
+                    <li>Добавление, отображение и удаление элементов.</li>
+                    <li>Виды компонентов.</li>
+                </ol>
                 <h3>Примеры: </h3>
+                <ol>
+                    <li><a href="./Pages/page7_Components.html" target="_blank">Основы компонентов</a></li>
+                    <li><a href="./Pages/page8_ComponentsKind.html" target="_blank">Виды компонентов</a></li>
+                </ol>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>AJAX запросы</h1>
+
+                <ol>
+                    <li>Используем Ajax для получения и обработки данных json и xml</li>
+                </ol>
                 
                 <h3>Примеры: </h3>
+                <li><a href="./Pages/page9_AjaxJson.html" target="_blank">Получение json и xml с помощью ajax</a></li>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Формы</h1>
+
+                <ol>
+                    <li>Ext.form.Panel - форма это по сути панель, только данные в ней являются единым объектом.</li>
+                    <li>Валидация полей в форме</li>
+                    <li>В работе с формами нам понадобиться поднять локальный сервер на node.js для обмена данными с формой.</li>
+                    <li>Чтобы всё работало, выполните в консоле следующие команды: <br>
+                        1. npm install <br>
+                        2. node api.js </li>
+                </ol>
                 
                 <h3>Примеры: </h3>
+                <li><a href="./Pages/page10_Forms.html" target="_blank">Работа с формами</a></li>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Работа с данными</h1>
+
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
                 
                 <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Рисование и диаграмы</h1>
+
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
                 
                 <h3>Примеры: </h3>
             </div>
             <div class="slide">
                 <div id="app-container"></div>
                 <h1>Архитектура приложения и MVC</h1>
+
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
                 
                 <h3>Примеры: </h3>
             </div>
@@ -179,6 +229,10 @@
                     <li>Ext.XTemplate - встраивание HTML-кода (условия и циклы как во Vue, а также вставка JavaScript);</li>
                 </ol>
                 <h3>Примеры: </h3>
+                <ol>
+                    <li><a href="./Pages/" target="_blank">Работа с датами</a></li>
+                    <li><a href="./Pages/" target="_blank">Шаблолны</a></li>
+                </ol>
             </div>
         </div>
         <p style="margin-top: -120px;"> 
