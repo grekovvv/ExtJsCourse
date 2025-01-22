@@ -91,7 +91,7 @@ Ext.define('Classes.Person', {
         console.log("Полное имя : " + this.name + " " + this.surname);
     },
   });
- 
+
 var eugene = Ext.create('Classes.Person');
 eugene.getinfo();
 var james = Classes.Person.factory('James', 'Gosling');
